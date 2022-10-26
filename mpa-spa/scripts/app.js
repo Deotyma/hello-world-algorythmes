@@ -7,6 +7,9 @@ const labels = {
   about: "About"
 };// a JSON (JavaScript Objesct Notation)
 
+const pathName = window.location.pathname;
+let courrenetPage = "";
+
 //`` template literale with ${expression}
 // replacing an expression by its value  is an interpolation
 const menu = `
@@ -18,10 +21,10 @@ const menu = `
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="index.html">${labels.home}</a>
-      <a class="nav-link" href="contact.html">${labels.contact}</a>
-      <a class="nav-link" href="sign-in.html">${labels.signIn}</a>
-      <a class="nav-link" href="about.html">${labels.about}</a>
+      <a class="nav-link ${pathName == "/index.html" || pathName == "/"? " active" : ""}" href="index.html">${labels.home}</a>
+      <a class="nav-link ${pathName == "/contact.html"? " active" : ""}" href="contact.html">${labels.contact}</a>
+      <a class="nav-link ${pathName == "/sign-in.html"? " active" : ""}" href="sign-in.html">${labels.signIn}</a>
+      <a class="nav-link ${pathName == "/about.html"? " active" : ""}" href="about.html">${labels.about}</a>
     </div>
   </div>
 </div>
