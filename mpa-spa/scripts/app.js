@@ -1,3 +1,14 @@
+//Declare a variable of type object
+// Object  = a collection of proprieties, each propriety has a value (any type)
+const labels = {
+  home:"Home",
+  contact: "Contact",
+  signIn: "Sign-in",
+  about: "About"
+};// a JSON (JavaScript Objesct Notation)
+
+//`` template literale with ${expression}
+// replacing an expression by its value  is an interpolation
 const menu = `
 <nav class="navbar navbar-expand-lg bg-light">
 <div class="container-fluid">
@@ -7,10 +18,10 @@ const menu = `
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-      <a class="nav-link" href="contact.html">Contact</a>
-      <a class="nav-link" href="sign-in.html">Sign In</a>
-      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" aria-current="page" href="index.html">${labels.home}</a>
+      <a class="nav-link" href="contact.html">${labels.contact}</a>
+      <a class="nav-link" href="sign-in.html">${labels.signIn}</a>
+      <a class="nav-link" href="about.html">${labels.about}</a>
     </div>
   </div>
 </div>
