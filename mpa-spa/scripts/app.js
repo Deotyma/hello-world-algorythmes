@@ -51,7 +51,7 @@ const aboutContent = `
 
 const contactContent = `
   <h1>${labels.contact.h1}</h1>
-  <p>This is a vontact page</p>
+  <p>This is a contact page</p>
 `;
 
 const signInContent = `
