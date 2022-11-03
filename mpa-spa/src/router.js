@@ -1,5 +1,5 @@
 import { renderHome } from "./components/home.js";
-import { renderContact } from "./components/contact.js";
+import { renderProfil } from "./components/profil.js";
 import { renderAbout } from "./components/about.js";
 import { renderSignIn } from "./components/signIn.js";
 import { renderError404 } from "./components/error404.js";
@@ -12,8 +12,8 @@ function route() {
     const hash = window.location.hash;
     if(hash == "#/home" || hash == ""){
         renderHome();
-    } else if(hash == "#/contact"){
-        renderContact();
+    } else if(hash == "#/profil"){
+        renderProfil();
     } else if( hash == "#/about"){
         renderAbout();
     } else if (hash=="#/sign-in"){

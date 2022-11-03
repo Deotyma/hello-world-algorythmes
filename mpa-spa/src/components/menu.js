@@ -12,7 +12,7 @@ function renderMenu(){
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/#/home">${messages.home.menuItem}</a>
-        <a class="nav-link" href="/#/contact">${messages.contact.menuItem}</a>
+        <a class="nav-link" href="/#/profil">${messages.profil.menuItem}</a>
         <a class="nav-link" href="/#/sign-in">${messages.signIn.menuItem}</a>
         <a class="nav-link" href="/#/about">${messages.about.menuItem}</a>
       </div>

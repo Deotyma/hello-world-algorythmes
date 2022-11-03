@@ -1,0 +1,29 @@
+{
+"brand":"SPA",
+    "home":{
+        "menuItem":"Acceuil", 
+        "h1":"Bienvenue sur  SPA", 
+        "h2":"Ici tu va lire ce que ti va vaire dur la page"
+    },
+    "profil": {
+        "menuItem": "Profile", 
+        "h1": "Profile",
+        "firstName": "Prenom",
+        "lastName": "Nom",
+        "treiner": "Je suis formateur",
+        "button":"Envoyer"
+    },
+    "signIn": {
+        "menuItem":"Connexion", 
+        "h1": "Connection"
+    },
+    "about": {
+        "menuItem":"À PROPOS", 
+        "h1": "À propos", 
+        "h2": "Ici tu va trouver qui nous sommes"
+    },
+    "error":{
+        "h1":"ERROR 404 pas trouvé", 
+        "h2":"Le document demandé n'existe pas"
+    }
+}

@@ -5,9 +5,13 @@
         "h1":"Welcome to SPA demo", 
         "h2":"Here you will read what we do"
     },
-    "contact": {
-        "menuItem": "Contact", 
-        "h1": "Contact"
+    "profil": {
+        "menuItem": "Profil", 
+        "h1": "Profil",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "treiner": "I'm a teacher",
+        "button": "Create"
     },
     "signIn": {
         "menuItem":"Sign-in", 
