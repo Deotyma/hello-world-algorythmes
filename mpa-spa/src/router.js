@@ -1,25 +1,36 @@
-import { renderHome } from "./components/home.js";
-import { renderProfil } from "./components/profil.js";
-import { renderAbout } from "./components/about.js";
-import { renderSignIn } from "./components/signIn.js";
-import { renderError404 } from "./components/error404.js";
+import HomeComponent from "./components/HomeComponent.js";
+import ProfilComponent from "./components/ProfilComponent.js";
+import AboutComponent from "./components/AboutComponent.js";
+import SignInComponent from "./components/SignInComponent.js";
+import NotFoundComponent from "./components/NotFoundComponent.js"
+import FooterComponent from "./components/FooterComponent.js"
+import MenuComponent from "./components/MenuComponent.js"
 
-const routes = ["", "#/home", "#/about", "#/sign-in", "#/contact"]
+export default class Router {
 
-window.addEventListener("hashchange", (event) => route(event));
+    static init(){
+        window.addEventListener("hashchange", (event) => Router.route(event));
+        Router.route();
+        const menu = new MenuComponent();
+        menu.render();
+        const footer = new FooterComponent();
+        footer.render();
+    }
+    static route(event) {
+        const hash = window.location.hash;
+        let component = null;
 
-function route() {
-    const hash = window.location.hash;
-    if(hash == "#/home" || hash == ""){
-        renderHome();
-    } else if(hash == "#/profil"){
-        renderProfil();
-    } else if( hash == "#/about"){
-        renderAbout();
-    } else if (hash=="#/sign-in"){
-        renderSignIn();
-    }else{
-        renderError404();
-    };
+        if(hash == "#/home" || hash == ""){
+           component= new HomeComponent();// instence of HomeComponent
+        } else if(hash == "#/profil"){
+            component = new ProfilComponent;
+        } else if( hash == "#/about"){
+           component = new AboutComponent;
+        } else if (hash=="#/sign-in"){
+           component = new SignInComponent;
+        }else{
+            component = new NotFoundComponent;
+        };
+        component.render();
+    }
 }
-export {routes, route};
